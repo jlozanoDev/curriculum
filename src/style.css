@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  html.dark body {
+    background-color: #16171d;
+  }
+
+  html:not(.dark) body {
+    background-color: #ffffff;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
