@@ -59,16 +59,23 @@ export const profileData = {
     "Curso de Gestión de Equipos Ágiles"
   ],
   techStack: [
-    { name: "Vue.js", icon: "vue" },
-    { name: "Laravel", icon: "laravel" },
-    { name: "PHP", icon: "php" },
-    { name: "JavaScript", icon: "javascript" },
-    { name: "TypeScript", icon: "typescript" },
-    { name: "Tailwind CSS", icon: "tailwind" },
-    { name: "Vite", icon: "vite" },
-    { name: "MySQL", icon: "mysql" },
-    { name: "Git", icon: "git" },
-    { name: "Figma", icon: "figma" }
+    { name: "Vue.js", icon: "vue", category: "Frontend" },
+    { name: "React", icon: "react", category: "Frontend" },
+    { name: "jQuery", icon: "jquery", category: "Frontend" },
+    { name: "Bootstrap", icon: "bootstrap", category: "Frontend" },
+    { name: "JavaScript", icon: "javascript", category: "Frontend" },
+    { name: "TypeScript", icon: "typescript", category: "Frontend" },
+    { name: "Tailwind CSS", icon: "tailwind", category: "Frontend" },
+    { name: "Laravel", icon: "laravel", category: "Backend" },
+    { name: "PHP", icon: "php", category: "Backend" },
+    { name: "Node.js", icon: "nodejs", category: "Backend" },
+    { name: "MySQL", icon: "mysql", category: "Backend" },
+    { name: "Vite", icon: "vite", category: "Herramientas" },
+    { name: "Git", icon: "git", category: "Herramientas" },
+    { name: "Docker", icon: "docker", category: "Herramientas" },
+    { name: "GitHub Actions", icon: "github_actions", category: "Herramientas" },
+    { name: "Figma", icon: "figma", category: "Herramientas" },
+    { name: "Desarrollo asistido por IA", icon: "ai", category: "Herramientas" }
   ],
   languages: [
     { name: "Español", level: "Nativo" },
@@ -79,6 +86,6 @@ export const profileData = {
     phone: "666969888",
     location: "Málaga, Andalucía, España",
     linkedin: "https://www.linkedin.com/in/jlozanofortes",
-    website: "https://jorgelozano.dev"
+    website: "https://jlozanodev.vercel.app"
   }
 };

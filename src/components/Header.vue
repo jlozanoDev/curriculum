@@ -100,38 +100,67 @@ const { scrollY } = useParallax();
         <TypewriterText :text="profileData.role" :speed="50" :delay="900" tag="span" />
       </p>
 
+      <!-- Contacto info -->
       <div
-        class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 mb-8"
+        class="flex flex-wrap justify-center gap-x-1 gap-y-3 mb-8 text-sm"
         :style="{ transform: `translateY(${scrollY * 0.02}px)` }"
       >
+        <!-- Email -->
         <a
           :href="`mailto:${profileData.contact.email}`"
-          class="px-5 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:scale-110 hover:shadow-lg"
+          class="group flex items-center gap-2 px-4 py-2.5 rounded-full border transition-all duration-300 hover:scale-105"
           :class="isDark
-            ? 'bg-gray-800 text-gray-200 hover:bg-gray-700 hover:shadow-purple-900/30'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-purple-300/30'"
+            ? 'border-gray-700 bg-gray-800/60 hover:border-purple-500/70 hover:bg-gray-800'
+            : 'border-gray-200 bg-white hover:border-purple-300 hover:shadow-sm hover:shadow-purple-100'"
         >
-          📧 {{ profileData.contact.email }}
+          <span class="flex items-center justify-center w-5 h-5 rounded-full" :class="isDark ? 'text-purple-400' : 'text-purple-500'">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </span>
+          <span class="transition-colors duration-300" :class="isDark ? 'text-gray-300 group-hover:text-purple-300' : 'text-gray-600 group-hover:text-purple-600'">{{ profileData.contact.email }}</span>
         </a>
+
+        <!-- Separador -->
+        <span class="hidden sm:flex items-center mx-1 transition-colors" :class="isDark ? 'text-gray-700' : 'text-gray-300'">·</span>
+
+        <!-- Teléfono -->
         <a
           :href="`tel:${profileData.contact.phone}`"
-          class="px-5 py-3 rounded-xl text-sm font-medium transition-all duration-300 hover:scale-110 hover:shadow-lg"
+          class="group flex items-center gap-2 px-4 py-2.5 rounded-full border transition-all duration-300 hover:scale-105"
           :class="isDark
-            ? 'bg-gray-800 text-gray-200 hover:bg-gray-700 hover:shadow-purple-900/30'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-purple-300/30'"
+            ? 'border-gray-700 bg-gray-800/60 hover:border-purple-500/70 hover:bg-gray-800'
+            : 'border-gray-200 bg-white hover:border-purple-300 hover:shadow-sm hover:shadow-purple-100'"
         >
-          📱 {{ profileData.contact.phone }}
+          <span class="flex items-center justify-center w-5 h-5" :class="isDark ? 'text-purple-400' : 'text-purple-500'">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+          </span>
+          <span class="transition-colors duration-300" :class="isDark ? 'text-gray-300 group-hover:text-purple-300' : 'text-gray-600 group-hover:text-purple-600'">{{ profileData.contact.phone }}</span>
         </a>
+
+        <!-- Separador -->
+        <span class="hidden sm:flex items-center mx-1 transition-colors" :class="isDark ? 'text-gray-700' : 'text-gray-300'">·</span>
+
+        <!-- Ubicación -->
         <span
-          class="px-5 py-3 rounded-xl text-sm font-medium transition-all duration-300"
+          class="flex items-center gap-2 px-4 py-2.5 rounded-full border transition-colors duration-300"
           :class="isDark
-            ? 'bg-gray-800 text-gray-300'
-            : 'bg-gray-100 text-gray-700'"
+            ? 'border-gray-700 bg-gray-800/60 text-gray-400'
+            : 'border-gray-200 bg-white text-gray-500'"
         >
-          📍 {{ profileData.contact.location }}
+          <span :class="isDark ? 'text-purple-400' : 'text-purple-500'">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </span>
+          {{ profileData.contact.location }}
         </span>
       </div>
 
+      <!-- Links sociales -->
       <div
         class="flex flex-wrap justify-center gap-3 mb-10"
         :style="{ transform: `translateY(${scrollY * 0.01}px)` }"
@@ -139,20 +168,30 @@ const { scrollY } = useParallax();
         <a
           :href="profileData.contact.linkedin"
           target="_blank"
-          class="px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg"
+          class="group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
           :class="isDark
-            ? 'bg-blue-900/50 text-blue-300 hover:bg-blue-800/60 hover:shadow-blue-900/40'
-            : 'bg-blue-50 text-blue-600 hover:bg-blue-100 hover:shadow-blue-300/40'"
-        >LinkedIn</a>
+            ? 'bg-blue-950/60 text-blue-300 border border-blue-800 hover:bg-blue-900/50 hover:border-blue-600 hover:shadow-blue-900/30'
+            : 'bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 hover:border-blue-300 hover:shadow-blue-200/60'"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          LinkedIn
+        </a>
         <a
           v-if="profileData.contact.website"
           :href="profileData.contact.website"
           target="_blank"
-          class="px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg"
+          class="group flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
           :class="isDark
-            ? 'bg-purple-900/50 text-purple-300 hover:bg-purple-800/60 hover:shadow-purple-900/40'
-            : 'bg-purple-50 text-purple-600 hover:bg-purple-100 hover:shadow-purple-300/40'"
-        >🌐 Website</a>
+            ? 'bg-purple-950/60 text-purple-300 border border-purple-800 hover:bg-purple-900/50 hover:border-purple-600 hover:shadow-purple-900/30'
+            : 'bg-purple-50 text-purple-600 border border-purple-100 hover:bg-purple-100 hover:border-purple-300 hover:shadow-purple-200/60'"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+          Website
+        </a>
       </div>
 
       <button
