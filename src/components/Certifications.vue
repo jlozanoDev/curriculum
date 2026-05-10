@@ -49,7 +49,7 @@ const parsedCerts = computed(() =>
         class="text-3xl font-light mb-10 transition-colors duration-300 h-[1.4em] font-mono"
         :class="isDark ? 'text-gray-100' : 'text-gray-900'"
       >
-        $<TypewriterText text="Certificaciones / Cursos" :speed="30" tag="span" />
+        $<TypewriterText text="Certificaciones $Cursos" :speed="30" tag="span" />
       </h2>
 
       <div class="grid gap-3">
