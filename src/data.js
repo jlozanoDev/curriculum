@@ -76,11 +76,27 @@ export const profileData = {
     { name: "Español", level: "Nativo" },
     { name: "Inglés", level: "Professional Working" }
   ],
+  portfolio: [
+    { name: "gestor_finanzas", description: "Gestor de finanzas personal", language: "Vue", techs: [{ name: "Vue", icon: "vue" }, { name: "TypeScript", icon: "typescript" }, { name: "Tailwind", icon: "tailwind" }, { name: "Vite", icon: "vite" }, { name: "Pinia", icon: "vue" }, { name: "Chart.js", icon: "javascript" }] },
+    { name: "materiaGris_api", description: "API para plataforma materia gris", language: "PHP", techs: [{ name: "PHP", icon: "php" }, { name: "Laravel", icon: "laravel" }, { name: "Docker", icon: "docker" }] },
+    { name: "materiaGris_front", description: "Frontend para plataforma materia gris", language: "Vue", techs: [{ name: "Vue", icon: "vue" }, { name: "Vuetify", icon: "vue" }, { name: "PrimeVue", icon: "vue" }, { name: "Tailwind", icon: "tailwind" }, { name: "Vite", icon: "vite" }, { name: "Sass", icon: "css3" }] },
+    { name: "pokedesk", description: "Pokedex interactiva con TypeScript", language: "TypeScript", techs: [{ name: "React", icon: "react" }, { name: "Next.js", icon: "react" }, { name: "TypeScript", icon: "typescript" }, { name: "Tailwind", icon: "tailwind" }] },
+    { name: "snake", description: "Juego clásico de Snake", language: "Vue", url: "https://snake-jlozanodev.vercel.app", techs: [{ name: "Vue", icon: "vue" }, { name: "Vite", icon: "vite" }] },
+    { name: "todolist", description: "Todo list realizado con Codex", language: "Vue", techs: [{ name: "Vue", icon: "vue" }, { name: "Vite", icon: "vite" }] },
+    { name: "TodoReact", description: "Aplicación de Todo realizada en React", language: "JavaScript", techs: [{ name: "React", icon: "react" }, { name: "JavaScript", icon: "javascript" }] },
+    { name: "Ecommerce-React", description: "Plataforma de comercio electrónico con React", language: "JavaScript", techs: [{ name: "React", icon: "react" }, { name: "Tailwind", icon: "tailwind" }, { name: "Vite", icon: "vite" }, { name: "React Router", icon: "react" }] },
+    { name: "CursoEcmacScript", description: "Ejercicios y apuntes del curso de ECMAScript", language: "JavaScript", techs: [{ name: "JavaScript", icon: "javascript" }, { name: "Node.js", icon: "nodejs" }] },
+    { name: "regresoAlFuturo", description: "Landing page temática sobre Regreso al Futuro", language: "HTML", techs: [{ name: "HTML5", icon: "html5" }, { name: "CSS3", icon: "css3" }] },
+    { name: "ui-ux-Tienda-online", description: "Boceto de tienda online", language: "HTML", techs: [{ name: "HTML5", icon: "html5" }, { name: "CSS3", icon: "css3" }] },
+    { name: "agents", description: "Proyecto ejemplo de agents.md", language: "Markdown", techs: [] },
+    { name: "curriculum", description: "Curriculum vitae interactivo", language: "Vue", url: "https://jlozanodev.vercel.app", techs: [{ name: "Vue", icon: "vue" }, { name: "Vite", icon: "vite" }, { name: "Tailwind", icon: "tailwind" }] }
+  ],
   contact: {
     email: "j-lozano@hotmail.es",
     phone: "666969888",
     location: "Málaga, Andalucía, España",
     linkedin: "https://www.linkedin.com/in/jlozanofortes",
+    github: "https://github.com/jlozanoDev",
     website: "https://jlozanodev.vercel.app"
   }
 };

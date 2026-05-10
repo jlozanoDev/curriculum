@@ -7,6 +7,7 @@ import Experience from './components/Experience.vue'
 import Education from './components/Education.vue'
 import TechStack from './components/TechStack.vue'
 import Certifications from './components/Certifications.vue'
+import Portfolio from './components/Portfolio.vue'
 import Contact from './components/Contact.vue'
 
 const { isDark, toggleTheme } = useTheme()
@@ -34,6 +35,10 @@ const { isDark, toggleTheme } = useTheme()
 
     <Transition name="fade">
       <Certifications :certifications="profileData.certifications" :isDark="isDark" />
+    </Transition>
+
+    <Transition name="fade">
+      <Portfolio :portfolio="profileData.portfolio" :isDark="isDark" />
     </Transition>
 
     <Transition name="fade">
