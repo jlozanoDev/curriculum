@@ -1,19 +1,19 @@
 export const profileData = {
   name: "Jorge Lozano Fortes",
   role: "Full Stack Developer",
-  profile: "Soy un desarrollador Full Stack altamente motivado y creativo con más de 10 años de experiencia en la creación de aplicaciones web y herramientas de software. Tengo experiencia en programación en lenguajes como PHP y JavaScript, y estoy familiarizado con frameworks como Laravel y Vue.js. También tengo habilidades en diseño de producto, UX/UI, y arquitectura de software. Me destaco por mi capacidad de trabajar en equipo, mi adaptabilidad y mi capacidad para resolver problemas de manera efectiva. Además, tengo experiencia en liderar y mentorizar a nuevos miembros del equipo.",
+  profile: "Desarrollador Full Stack con más de 10 años de experiencia creando aplicaciones web robustas. Especializado en Laravel y Vue.js, con dominio de React, TypeScript y arquitectura de software hexagonal. Buscando oportunidades como Full Stack Developer en empresas tecnológicas de España, con disponibilidad para trabajo remoto worldwide. Destaco en liderazgo de equipos, mentoring de desarrolladores junior y metodologías ágiles.",
   experience: [
     {
       company: "Salutic",
       position: "Full Stack Developer",
       period: "Oct 2019 - Presente",
-      description: "Desarrollo de aplicación web del sector salud utilizando PHP con el framework Laravel, MySQL con arquitectura hexagonal en entorno ágil. Revisión de código, buenas prácticas y aseguramiento de calidad mediante pruebas. Mentorización de nuevos empleados."
+      description: "Desarrollador Full Stack en Salutic desarrollando aplicaciones web para el sector salud. Implementación con Laravel, MySQL y arquitectura hexagonal en entorno ágil Scrum. Revisión de código, testing y mentoring de nuevos desarrolladores junior."
     },
     {
       company: "Nexius.es",
       position: "Co-fundador / Programador Front-end & Backend / Diseño de producto",
       period: "Abr 2012 - Oct 2019",
-      description: "Co-fundador de empresa de desarrollo de software especializada en diseño y desarrollo de productos digitales innovadores. Encargado del diseño de producto, gestión del ciclo de vida completo del producto, y desarrollo Front-end UI/UX y Backend."
+      description: "Co-fundador y desarrollador Full Stack en Nexius.es, empresa especializada en diseño y desarrollo de productos digitales. Responsable del diseño de producto, gestión del ciclo de vida completo y desarrollo frontend y backend con Vue.js y Laravel."
     },
     {
       company: "Avanade",

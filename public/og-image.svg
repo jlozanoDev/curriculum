@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16171d"/>
+      <stop offset="100%" style="stop-color:#2d2d3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <text x="100" y="120" font-family="system-ui, sans-serif" font-size="72" font-weight="bold" fill="#fff">Jorge Lozano Fortes</text>
+  <text x="100" y="200" font-family="system-ui, sans-serif" font-size="48" fill="#c084fc">Full Stack Developer</text>
+  <text x="100" y="280" font-family="system-ui, sans-serif" font-size="36" fill="#a0a0a0">Laravel • Vue.js • React • TypeScript</text>
+  <text x="100" y="350" font-family="system-ui, sans-serif" font-size="32" fill="#c084fc">+10 años de experiencia</text>
+  <text x="100" y="420" font-family="system-ui, sans-serif" font-size="28" fill="#808080">Málaga, España • Disponible Remoto</text>
+  <text x="100" y="520" font-family="system-ui, sans-serif" font-size="24" fill="#606060">jlozanodev.vercel.app</text>
+  <rect x="100" y="560" width="200" height="50" rx="8" fill="#c084fc"/>
+  <text x="130" y="592" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#16171d">LinkedIn</text>
+</svg>
