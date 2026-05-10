@@ -13,7 +13,7 @@ const { isDark, toggleTheme } = useTheme()
 </script>
 
 <template>
-  <div class="min-h-screen transition-colors duration-300" :class="isDark ? 'bg-[#16171d] text-gray-300' : 'bg-white text-gray-600'">
+    <div class="min-h-screen transition-colors duration-300" :class="isDark ? 'bg-[#0a0a0a] text-green-400' : 'bg-white text-gray-600'">
     <Header :isDark="isDark" @toggle-theme="toggleTheme" />
 
     <Transition name="fade">
@@ -40,7 +40,7 @@ const { isDark, toggleTheme } = useTheme()
       <Contact :contact="profileData.contact" :isDark="isDark" />
     </Transition>
 
-    <footer class="py-8 text-center text-sm transition-colors duration-300" :class="isDark ? 'text-gray-500' : 'text-gray-400'">
+    <footer class="py-8 text-center text-sm transition-colors duration-300" :class="isDark ? 'text-gray-600' : 'text-gray-400'">
       <p>Diseñado y desarrollado con ❤️</p>
     </footer>
   </div>

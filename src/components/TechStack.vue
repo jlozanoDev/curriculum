@@ -2,6 +2,7 @@
 import { computed } from 'vue';
 import { useParallax } from '../composables/useParallax.js';
 import TypewriterText from './TypewriterText.vue';
+import CodeBackground from './CodeBackground.vue';
 
 const techColors = {
   vue: '#42b883',
@@ -43,6 +44,21 @@ const props = defineProps({
 
 const { scrollY } = useParallax();
 
+const codeSnippet = `const tech = {
+  frontend: [
+    'Vue.js', 'React',
+    'Tailwind', 'TS'
+  ],
+  backend: [
+    'Laravel', 'PHP',
+    'Node.js', 'MySQL'
+  ],
+  tools: [
+    'Git', 'Docker',
+    'Vite', 'Figma'
+  ]
+};`
+
 const groupedTech = computed(() => {
   const groups = {};
   props.techStack.forEach(tech => {
@@ -59,24 +75,25 @@ const groupedTech = computed(() => {
 <template>
   <section
     class="py-20 px-6 relative overflow-hidden"
-    :class="isDark ? 'bg-gray-900/50' : 'bg-gray-50'"
+    :class="isDark ? 'bg-[#111111]' : 'bg-gray-50'"
   >
     <div
       class="absolute inset-0 transition-transform duration-75"
       :style="{
         transform: `translateY(${scrollY * -0.04}px)`,
         background: isDark
-          ? 'radial-gradient(ellipse at 70% 50%, rgba(192, 132, 252, 0.03) 0%, transparent 60%)'
+          ? 'radial-gradient(ellipse at 70% 50%, rgba(74, 222, 128, 0.02) 0%, transparent 60%)'
           : 'radial-gradient(ellipse at 70% 50%, rgba(170, 59, 255, 0.02) 0%, transparent 60%)'
       }"
     ></div>
 
+    <CodeBackground v-if="isDark" :code="codeSnippet" delay="2500" />
     <div class="max-w-2xl mx-auto relative z-10">
       <h2
-        class="text-3xl font-light mb-10 transition-colors duration-300 h-[1.4em]"
+        class="text-3xl font-light mb-10 transition-colors duration-300 h-[1.4em] font-mono"
         :class="isDark ? 'text-gray-100' : 'text-gray-900'"
       >
-        $ <TypewriterText text="Stack Tecnológico" :speed="30" tag="span" />
+        $<TypewriterText text="Stack_Tecnológico" :speed="30" tag="span" />
       </h2>
 
       <!-- Tecnologías agrupadas por categoría -->
@@ -84,7 +101,7 @@ const groupedTech = computed(() => {
         <div v-for="group in groupedTech" :key="group.label">
           <h3
             class="text-xs font-semibold uppercase tracking-widest mb-3 transition-colors duration-300"
-            :class="isDark ? 'text-purple-400' : 'text-purple-500'"
+            :class="isDark ? 'text-green-400' : 'text-purple-500'"
           >
             {{ group.label }}
           </h3>
@@ -94,7 +111,7 @@ const groupedTech = computed(() => {
               :key="tech.name"
               class="flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105 cursor-default"
               :class="isDark
-                ? 'bg-gray-800/80 border-gray-700 hover:border-purple-500/60'
+                ? 'bg-[#1a1a1a] border-gray-700 hover:border-green-500/60'
                 : 'bg-white border-gray-200 hover:border-purple-300 hover:shadow-sm'"
             >
               <span
@@ -116,7 +133,7 @@ const groupedTech = computed(() => {
       <div>
         <h3
           class="text-xs font-semibold uppercase tracking-widest mb-4 transition-colors duration-300"
-          :class="isDark ? 'text-purple-400' : 'text-purple-500'"
+          :class="isDark ? 'text-green-400' : 'text-purple-500'"
         >
           Idiomas
         </h3>
@@ -125,7 +142,7 @@ const groupedTech = computed(() => {
             v-for="lang in languages"
             :key="lang.name"
             class="p-4 rounded-xl border transition-colors duration-300"
-            :class="isDark ? 'bg-gray-800/80 border-gray-700' : 'bg-white border-gray-200'"
+            :class="isDark ? 'bg-[#1a1a1a] border-gray-700' : 'bg-white border-gray-200'"
           >
             <div class="flex justify-between items-center mb-2.5">
               <span
@@ -136,18 +153,18 @@ const groupedTech = computed(() => {
               </span>
               <span
                 class="text-xs font-medium px-2 py-0.5 rounded-full transition-colors duration-300"
-                :class="isDark ? 'bg-purple-900/50 text-purple-300' : 'bg-purple-50 text-purple-600'"
+                :class="isDark ? 'bg-green-900/50 text-green-300' : 'bg-purple-50 text-purple-600'"
               >
                 {{ lang.level }}
               </span>
             </div>
             <div
               class="h-1 rounded-full overflow-hidden"
-              :class="isDark ? 'bg-gray-700' : 'bg-gray-100'"
+              :class="isDark ? 'bg-gray-800' : 'bg-gray-100'"
             >
               <div
                 class="h-full rounded-full transition-all duration-700"
-                :class="isDark ? 'bg-purple-500' : 'bg-purple-400'"
+                :class="isDark ? 'bg-green-500' : 'bg-purple-400'"
                 :style="{ width: (levelMap[lang.level] ?? 50) + '%' }"
               ></div>
             </div>

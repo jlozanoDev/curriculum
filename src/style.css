@@ -1,12 +1,16 @@
 @import "tailwindcss";
 
+@theme {
+  --font-mono: "Fira Code", monospace;
+}
+
 @layer base {
   body {
     @apply antialiased;
   }
 
   html.dark body {
-    background-color: #16171d;
+    background-color: #0a0a0a;
   }
 
   html:not(.dark) body {

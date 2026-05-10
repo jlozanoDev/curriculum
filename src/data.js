@@ -1,6 +1,6 @@
 export const profileData = {
   name: "Jorge Lozano Fortes",
-  role: "Full Stack Developer",
+  role: "Full_Stack_Developer",
   profile: "Desarrollador Full Stack con más de 10 años de experiencia creando aplicaciones web robustas. Especializado en Laravel y Vue.js, con dominio de React, TypeScript y arquitectura de software hexagonal. Buscando oportunidades como Full Stack Developer en empresas tecnológicas de España, con disponibilidad para trabajo remoto worldwide. Destaco en liderazgo de equipos, mentoring de desarrolladores junior y metodologías ágiles.",
   experience: [
     {
@@ -45,11 +45,6 @@ export const profileData = {
       degree: "Técnico especialista en Informática de Gestión",
       period: "1997 - 2000"
     },
-    {
-      institution: "Curso Social Manager",
-      degree: "Social Manager",
-      period: "2013"
-    }
   ],
   certifications: [
     "Curso de Configuración de Entorno de Desarrollo en Windows",
