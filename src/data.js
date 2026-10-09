@@ -47,6 +47,7 @@ export const profileData = {
     },
   ],
   certifications: [
+    "Máster de Desarrollo con IA",
     "Curso de Configuración de Entorno de Desarrollo en Windows",
     "Curso de ECMAScript: Historia y Versiones de JavaScript",
     "Curso de NPM: Gestión de Paquetes y Dependencias en JavaScript",

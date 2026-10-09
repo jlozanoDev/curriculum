@@ -20,7 +20,7 @@ const codeSnippet = `const certifications = [
 
 const parsedCerts = computed(() =>
   props.certifications.map(cert => {
-    const match = cert.match(/^(Curso de |Certificación en |Certificado de )(.*)/i);
+    const match = cert.match(/^(Curso de |Máster de |Certificación en |Certificado de )(.*)/i);
     return match
       ? { type: match[1].trim(), name: match[2] }
       : { type: 'Certificación', name: cert };
